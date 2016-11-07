@@ -610,7 +610,7 @@ void Nrf24::PowerDown(void)
 	SetPowerMode(nRF24_PWR_DOWN);
 }
 //--------------------------------------------------------------------
-void Nrf24::StartListening(void)
+void Nrf24::SetRxMode(void)
 {
    PowerUp();
 	 SetOperationalMode(nRF24_MODE_RX);
@@ -618,12 +618,12 @@ void Nrf24::StartListening(void)
 	 nRF24_CE_H();
 }
 //--------------------------------------------------------------------
-bool Nrf24::Available (void)
+bool Nrf24::DataAvailable (void)
 {
   return(GetStatus_RXFIFO() != nRF24_STATUS_RXFIFO_EMPTY);
 }
 //--------------------------------------------------------------------
-void Nrf24::StartTransmitting (void)
+void Nrf24::SetTxMode (void)
 {
 	PowerUp();
 	SetOperationalMode(nRF24_MODE_TX);

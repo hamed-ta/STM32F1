@@ -277,8 +277,8 @@ class Nrf24
 		 void ClearIRQFlags				(void);
 		 void PowerUp						 	(void);
 		 void PowerDown						(void);
-		 void StartListening      (void);
-	   void StartTransmitting   (void);
+		 void SetRxMode      			(void);
+	   void SetTxMode   				(void);
 	   void SetPowerMode    		(uint8_t mode); 
 	   void SetOperationalMode	(uint8_t mode);
 	   void SetCRCScheme				(uint8_t scheme); 
@@ -308,7 +308,7 @@ class Nrf24
 		 nRF24_RXResult ReadPayload		 (uint8_t *pBuf, uint8_t *length);
 		 nRF24_TXResult TransmitPacket (uint8_t *pBuf, uint8_t length);		
 
-     bool Available (void);
+     bool DataAvailable (void);
 		 
 	
 	
