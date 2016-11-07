@@ -92,3 +92,5 @@ if (status & nRF24_FLAG_MAX_RT) {
 
 ## Demo code
 `Examples` contains two simple Transmitter and Receiver demo code. It written for **STM32F103** MCU using the old **SPL** in C++ and keil uVision 5. 
+
+## Special thanks to Dmitry (https://github.com/LonelyWolf) for write this library in C.
